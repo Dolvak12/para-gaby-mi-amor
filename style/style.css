@@ -7,7 +7,7 @@ body {
   margin: 0;
   font-family: "Work Sans", sans-serif;
   overflow-x: hidden;
-  background: #0a0a0a;
+  background: #fef5f0;
   height: 100%;
 }
 
@@ -21,7 +21,7 @@ body {
   visibility: hidden;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(180deg, #0a0a0a 0%, #1a0a1a 40%, #0d1a1a 100%);
+  background: linear-gradient(170deg, #fef5f0 0%, #fce4e0 25%, #fde8e8 50%, #fef0f0 75%, #fef5f0 100%);
 }
 
 .container div.six {
@@ -47,6 +47,7 @@ body {
 /* ── Saludo ── */
 .one {
   font-size: 2.8rem;
+  color: #3d1c24;
 }
 
 .one > img {
@@ -59,30 +60,30 @@ body {
 .two {
   font-size: 1rem;
   font-weight: lighter;
-  color: #ccc;
+  color: #8b5e6b;
 }
 
 /* ── Día cualquiera ── */
 .three {
   font-size: 1.8rem;
-  color: #ff80b0;
+  color: #d4687c;
 }
 
 /* ── Chat falso ── */
 .four .text-box {
   max-width: 320px;
   margin: 0 auto;
-  border: 2px solid #ff4080;
+  border: 2px solid #e8a0b0;
   border-radius: 12px;
   padding: 12px;
   position: relative;
-  background: rgba(30, 30, 30, 0.9);
+  background: #fff;
 }
 
 .text-box p {
   margin: 0;
   text-align: left;
-  color: #f0f0f0;
+  color: #3d1c24;
   font-size: 0.95rem;
 }
 
@@ -95,7 +96,7 @@ body {
   right: 6px;
   bottom: 6px;
   color: #fff;
-  background-color: #ff4080;
+  background-color: #d4687c;
   padding: 4px 10px;
   border-radius: 10px;
   font-size: 0.75rem;
@@ -107,20 +108,20 @@ body {
   position: absolute;
   left: 0;
   right: 0;
-  color: #f0e0e0;
+  color: #3d1c24;
 }
 
 .idea-3 strong {
   padding: 3px 8px;
   border-radius: 4px;
   display: inline-block;
-  background: rgba(255, 64, 128, 0.2);
-  color: #ff80b0;
+  background: rgba(212, 104, 124, 0.15);
+  color: #d4687c;
 }
 
 .five .idea-5 {
   font-size: 2.4rem;
-  color: #ff80b0;
+  color: #d4687c;
   font-weight: bold;
 }
 
@@ -132,9 +133,25 @@ body {
 
 .idea-6 span {
   font-size: 8rem;
-  color: #ff4080;
+  color: #c94a60;
   font-weight: 900;
-  text-shadow: 0 0 40px rgba(255, 64, 128, 0.5);
+  text-shadow: 0 2px 20px rgba(201, 74, 96, 0.2);
+}
+
+/* ── Frase animada extra ── */
+.extra-message {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 22vh;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #c94a60;
+  visibility: hidden;
+}
+
+.extra-message span {
+  display: inline-block;
 }
 
 /* ── Imagen y mensaje ── */
@@ -147,7 +164,7 @@ body {
   max-width: 70%;
   height: auto;
   border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(255, 64, 128, 0.25);
+  box-shadow: 0 4px 30px rgba(180, 80, 100, 0.2);
 }
 
 .six .hat {
@@ -186,41 +203,41 @@ body {
   z-index: -1;
 }
 
-.eight svg:nth-child(1) { top: 7vh; left: 5vw; fill: #ff4080; }
-.eight svg:nth-child(2) { top: 23vh; left: 75vw; fill: #ff80b0; }
-.eight svg:nth-child(3) { top: 33vh; left: 15vw; fill: #e04070; }
-.eight svg:nth-child(4) { top: 48vh; left: 80vw; fill: #ff6090; }
-.eight svg:nth-child(5) { top: 63vh; left: 8vw; fill: #ff4080; }
-.eight svg:nth-child(6) { top: 38vh; left: 88vw; fill: #ff80b0; }
-.eight svg:nth-child(7) { top: 73vh; left: 85vw; fill: #e04070; }
-.eight svg:nth-child(8) { top: 83vh; left: 20vw; fill: #ff6090; }
-.eight svg:nth-child(9) { top: 90vh; left: 70vw; fill: #ff80b0; }
+.eight svg:nth-child(1) { top: 7vh; left: 5vw; fill: #e8a0b0; }
+.eight svg:nth-child(2) { top: 23vh; left: 75vw; fill: #d4687c; }
+.eight svg:nth-child(3) { top: 33vh; left: 15vw; fill: #e8b0b8; }
+.eight svg:nth-child(4) { top: 48vh; left: 80vw; fill: #c94a60; }
+.eight svg:nth-child(5) { top: 63vh; left: 8vw; fill: #e8a0b0; }
+.eight svg:nth-child(6) { top: 38vh; left: 88vw; fill: #d4687c; }
+.eight svg:nth-child(7) { top: 73vh; left: 85vw; fill: #e8b0b8; }
+.eight svg:nth-child(8) { top: 83vh; left: 20vw; fill: #c94a60; }
+.eight svg:nth-child(9) { top: 90vh; left: 70vw; fill: #d4687c; }
 
 /* ── Texto final ── */
 .wish-hbd {
   font-size: 1.6em;
   margin: 0;
-  color: #ff80b0;
+  color: #c94a60;
 }
 
 .wish h5 {
   font-weight: 300;
   font-size: 1rem;
   margin: 10px 16px 0;
-  color: #ccc;
+  color: #5c3d44;
   line-height: 1.5;
 }
 
 .nine p {
   font-size: 1.3rem;
   font-weight: lighter;
-  color: #ccc;
+  color: #5c3d44;
 }
 
 #replay {
   z-index: 3;
   cursor: pointer;
-  color: #ff80b0;
+  color: #d4687c;
 }
 
 /* ──────────────────── */
@@ -265,6 +282,11 @@ body {
 
   .idea-6 span {
     font-size: 15rem;
+  }
+
+  .extra-message {
+    font-size: 1.8rem;
+    top: 24vh;
   }
 
   .six img {

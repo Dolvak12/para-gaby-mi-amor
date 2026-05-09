@@ -168,6 +168,32 @@ const animationTimeline = () => {
       0.2,
       "+=1"
     )
+    // ── "significas mucho para mí" ──
+    .to(".extra-message", 0.2, { visibility: "visible" })
+    .staggerFrom(
+      "#extraMessage span",
+      0.6,
+      {
+        opacity: 0,
+        y: 40,
+        rotation: 25,
+        scale: 0.3,
+        ease: Back.easeOut.config(1.7),
+      },
+      0.04
+    )
+    .staggerTo(
+      "#extraMessage span",
+      0.5,
+      {
+        opacity: 0,
+        y: -30,
+        rotation: -10,
+        ease: Expo.easeIn,
+      },
+      0.03,
+      "+=2.5"
+    )
     .staggerFromTo(
       ".baloons img",
       2.5,
