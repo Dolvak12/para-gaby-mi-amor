@@ -291,19 +291,6 @@ const animationTimeline = () => {
       "+=1"
     );
 
-  // Solo permitir reiniciar al terminar la animación
-  let canRestart = false;
-
-  tl.eventCallback("onComplete", () => {
-    canRestart = true;
-  });
-
-  const container = document.querySelector(".container");
-  container.addEventListener("click", () => {
-    if (!canRestart) return;
-    canRestart = false;
-    tl.restart();
-  });
 };
 
 // Import the data to customize and insert them into page

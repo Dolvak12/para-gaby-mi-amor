@@ -236,17 +236,6 @@ body {
   color: #5c3d44;
 }
 
-#replay {
-  z-index: 3;
-  cursor: pointer;
-  color: #d4687c;
-  animation: pulse 2s ease-in-out infinite;
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 0.6; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.05); }
-}
 
 /* ──────────────────── */
 /*  Pantallas grandes   */
