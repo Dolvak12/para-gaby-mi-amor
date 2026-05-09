@@ -2,10 +2,11 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Para Gaby, mi amor ❤️</title>
     <link rel="shortcut icon" type="image/png" href="./img/heart.svg" />
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;700;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style/style.css" />
   </head>
 
@@ -19,7 +20,7 @@
         <p class="two" id="greetingText">La dueña de mis pensamientos...</p>
       </div>
       <div class="three">
-        <p>¡Feliz San Valentín! ❤️</p>
+        <p>Hoy es un día cualquiera...</p>
       </div>
       <div class="four">
         <div class="text-box">
@@ -128,6 +129,18 @@
     </div>
   </body>
 
+  <script>
+    // Fix viewport height on mobile browsers (TikTok, Instagram, etc.)
+    function setVh() {
+      var vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', vh + 'px');
+    }
+    setVh();
+    window.addEventListener('resize', setVh);
+    window.addEventListener('orientationchange', function() {
+      setTimeout(setVh, 100);
+    });
+  </script>
   <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
   <script type="text/babel" src="script/main.js"></script>

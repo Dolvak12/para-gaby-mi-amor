@@ -1,24 +1,31 @@
 html {
   box-sizing: border-box;
+  height: 100%;
 }
 
 body {
   margin: 0;
   font-family: "Work Sans", sans-serif;
+  overflow-x: hidden;
+  background: #0a0a0a;
+  height: 100%;
 }
 
 .container {
   height: 100vh;
-  width: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  height: 100dvh;
+  width: 100%;
   margin: 0 auto;
   text-align: center;
   visibility: hidden;
   position: relative;
   overflow: hidden;
+  background: linear-gradient(180deg, #0a0a0a 0%, #1a0a1a 40%, #0d1a1a 100%);
 }
 
 .container div.six {
-  top: 10vh;
+  top: 8vh;
   z-index: 1;
 }
 
@@ -34,11 +41,12 @@ body {
   position: absolute;
   left: 0;
   right: 0;
-  top: 20vh;
+  top: 18vh;
 }
 
+/* ── Saludo ── */
 .one {
-  font-size: 4.5rem;
+  font-size: 2.8rem;
 }
 
 .one > img {
@@ -49,26 +57,33 @@ body {
 }
 
 .two {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: lighter;
+  color: #ccc;
 }
 
+/* ── Día cualquiera ── */
 .three {
-  font-size: 3rem;
+  font-size: 1.8rem;
+  color: #ff80b0;
 }
 
+/* ── Chat falso ── */
 .four .text-box {
-  width: 600px;
+  max-width: 320px;
   margin: 0 auto;
-  border: 3px solid #aaa;
-  border-radius: 5px;
-  padding: 10px;
+  border: 2px solid #ff4080;
+  border-radius: 12px;
+  padding: 12px;
   position: relative;
+  background: rgba(30, 30, 30, 0.9);
 }
 
 .text-box p {
   margin: 0;
   text-align: left;
+  color: #f0f0f0;
+  font-size: 0.95rem;
 }
 
 .text-box span {
@@ -77,29 +92,36 @@ body {
 
 .text-box .fake-btn {
   position: absolute;
-  right: 5px;
-  bottom: 5px;
+  right: 6px;
+  bottom: 6px;
   color: #fff;
-  background-color: rgb(21, 161, 237);
-  padding: 5px 8px;
-  border-radius: 3px;
+  background-color: #ff4080;
+  padding: 4px 10px;
+  border-radius: 10px;
+  font-size: 0.75rem;
 }
 
+/* ── Frases animadas ── */
 .five p {
-  font-size: 2rem;
+  font-size: 1.4rem;
   position: absolute;
   left: 0;
   right: 0;
+  color: #f0e0e0;
 }
 
 .idea-3 strong {
-  padding: 3px 5px;
-  border-radius: 3px;
+  padding: 3px 8px;
+  border-radius: 4px;
   display: inline-block;
+  background: rgba(255, 64, 128, 0.2);
+  color: #ff80b0;
 }
 
 .five .idea-5 {
-  font-size: 4rem;
+  font-size: 2.4rem;
+  color: #ff80b0;
+  font-weight: bold;
 }
 
 .idea-5 span,
@@ -109,47 +131,54 @@ body {
 }
 
 .idea-6 span {
-  font-size: 15rem;
+  font-size: 8rem;
+  color: #ff4080;
+  font-weight: 900;
+  text-shadow: 0 0 40px rgba(255, 64, 128, 0.5);
 }
 
+/* ── Imagen y mensaje ── */
 .six {
   position: relative;
 }
 
 .six img {
   display: inline-block;
-  max-width: 45%;
+  max-width: 70%;
   height: auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(255, 64, 128, 0.25);
 }
 
 .six .hat {
   position: absolute;
-  width: 80px;
-  top: -35px;
+  width: 50px;
+  top: -25px;
   left: 41.5%;
-  /* transform: scale(0.1); */
 }
 
+/* ── Globos ── */
 .baloons img {
   display: inline-block;
   position: absolute;
-  width: 200px;
+  width: 100px;
 }
 
 .baloons img:nth-child(even) {
-  left: 10%;
+  left: 5%;
 }
 
 .baloons img:nth-child(odd) {
-  right: 10%;
+  right: 5%;
 }
 
 .baloons img:nth-child(3n + 0) {
   left: 30%;
 }
 
+/* ── Círculos decorativos ── */
 .eight svg {
-  width: 25px;
+  width: 18px;
   position: absolute;
   top: 0;
   left: 0;
@@ -157,144 +186,110 @@ body {
   z-index: -1;
 }
 
-.eight svg:nth-child(1) {
-  top: 7vh;
-  left: 5vw;
-  fill: #bd6ecf;
-}
+.eight svg:nth-child(1) { top: 7vh; left: 5vw; fill: #ff4080; }
+.eight svg:nth-child(2) { top: 23vh; left: 75vw; fill: #ff80b0; }
+.eight svg:nth-child(3) { top: 33vh; left: 15vw; fill: #e04070; }
+.eight svg:nth-child(4) { top: 48vh; left: 80vw; fill: #ff6090; }
+.eight svg:nth-child(5) { top: 63vh; left: 8vw; fill: #ff4080; }
+.eight svg:nth-child(6) { top: 38vh; left: 88vw; fill: #ff80b0; }
+.eight svg:nth-child(7) { top: 73vh; left: 85vw; fill: #e04070; }
+.eight svg:nth-child(8) { top: 83vh; left: 20vw; fill: #ff6090; }
+.eight svg:nth-child(9) { top: 90vh; left: 70vw; fill: #ff80b0; }
 
-.eight svg:nth-child(2) {
-  top: 23vh;
-  left: 35vw;
-  fill: #7dd175;
-}
-
-.eight svg:nth-child(3) {
-  top: 33vh;
-  left: 23vw;
-  fill: #349d8b;
-}
-
-.eight svg:nth-child(4) {
-  top: 43vh;
-  left: 57vw;
-  fill: #347a9d;
-}
-
-.eight svg:nth-child(5) {
-  top: 68vh;
-  left: 7vw;
-  fill: #c66053;
-}
-
-.eight svg:nth-child(6) {
-  top: 42vh;
-  left: 77vw;
-  fill: #bfaa40;
-}
-
-.eight svg:nth-child(7) {
-  top: 68vh;
-  left: 83vw;
-  fill: #e3bae8;
-}
-
-.eight svg:nth-child(8) {
-  top: 86vh;
-  left: 37vw;
-  fill: #8762cb;
-}
-
-.eight svg:nth-child(9) {
-  top: 94vh;
-  left: 87vw;
-  fill: #9a90da;
-}
-
+/* ── Texto final ── */
 .wish-hbd {
-  font-size: 3em;
+  font-size: 1.6em;
   margin: 0;
-  /* text-transform: uppercase; */
+  color: #ff80b0;
 }
 
 .wish h5 {
-  font-weight: lighter;
-  font-size: 2rem;
-  margin: 10px 0 0;
+  font-weight: 300;
+  font-size: 1rem;
+  margin: 10px 16px 0;
+  color: #ccc;
+  line-height: 1.5;
 }
 
 .nine p {
-  font-size: 2rem;
+  font-size: 1.3rem;
   font-weight: lighter;
+  color: #ccc;
 }
 
 #replay {
   z-index: 3;
   cursor: pointer;
+  color: #ff80b0;
 }
 
-/* Media Queries */
-@media screen and (max-height: 1000px) {
-  .six .hat {
-    left: 40%;
+/* ──────────────────── */
+/*  Pantallas grandes   */
+/* ──────────────────── */
+@media screen and (min-width: 768px) {
+  .container > div {
+    top: 20vh;
   }
-}
 
-@media screen and (max-height: 800px) {
-  .six .hat {
-    left: 37%;
+  .one {
+    font-size: 4.5rem;
   }
-}
 
-@media screen and (max-height: 700px) {
-  .six .hat {
-    left: 32%;
+  .two {
+    font-size: 1.2rem;
   }
-}
 
-@media screen and (max-height: 850px) and (max-width: 450px) {
-  .six .hat {
-    left: 32%;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .container {
-    width: 90%;
+  .three {
+    font-size: 3rem;
   }
 
   .four .text-box {
-    width: 90%;
+    max-width: 600px;
+  }
+
+  .text-box p {
+    font-size: 1.05rem;
   }
 
   .text-box .fake-btn {
-    right: 5px;
-    bottom: -38px;
+    font-size: 0.85rem;
   }
 
-  .idea-5 span {
-    display: block;
+  .five p {
+    font-size: 2rem;
+  }
+
+  .five .idea-5 {
+    font-size: 4rem;
   }
 
   .idea-6 span {
-    font-size: 10rem;
+    font-size: 15rem;
   }
 
-  .six .hat {
-    width: 50px;
-    top: -20px;
+  .six img {
+    max-width: 40%;
+  }
+
+  .baloons img {
+    width: 150px;
+  }
+
+  .eight svg {
+    width: 25px;
   }
 
   .wish-hbd {
-    font-size: 2.3em;
+    font-size: 2.5em;
   }
 
   .wish h5 {
     font-size: 1.4rem;
+    margin: 10px auto 0;
+    max-width: 500px;
   }
 
   .nine p {
-    font-size: 1.5rem;
-    font-weight: lighter;
+    font-size: 2rem;
   }
 }
