@@ -4,13 +4,16 @@ const animationTimeline = () => {
   const textBoxChars = document.getElementsByClassName("hbd-chatbox")[0];
   const hbd = document.getElementsByClassName("wish-hbd")[0];
 
-  textBoxChars.innerHTML = `<span>${textBoxChars.innerHTML
-    .split("")
-    .join("</span><span>")}</span`;
+  // Split by word so letters don't break across lines on mobile
+  textBoxChars.innerHTML = textBoxChars.innerHTML
+    .split(" ")
+    .map(word => `<span class="word">${word.split("").map(c => `<span>${c}</span>`).join("")}</span>`)
+    .join(" ");
 
-  hbd.innerHTML = `<span>${hbd.innerHTML
-    .split("")
-    .join("</span><span>")}</span`;
+  hbd.innerHTML = hbd.innerHTML
+    .split(" ")
+    .map(word => `<span class="word">${word.split("").map(c => `<span>${c}</span>`).join("")}</span>`)
+    .join(" ");
 
   const ideaTextTrans = {
     opacity: 0,

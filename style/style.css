@@ -9,6 +9,9 @@ body {
   overflow-x: hidden;
   background: #fef5f0;
   height: 100%;
+  word-break: normal;
+  overflow-wrap: break-word;
+  hyphens: none;
 }
 
 .container {
@@ -89,6 +92,11 @@ body {
 
 .text-box span {
   visibility: hidden;
+}
+
+.word {
+  white-space: nowrap;
+  display: inline-block;
 }
 
 .text-box .fake-btn {
