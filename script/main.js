@@ -296,10 +296,10 @@ const fetchData = () => {
 
 // Run fetch and animation in sequence
 const resolveFetch = () => {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     fetchData();
-    resolve("Fetch done!");
+    setTimeout(resolve, 500);
   });
 };
 
-resolveFetch().then(animationTimeline());
+resolveFetch().then(() => animationTimeline());
