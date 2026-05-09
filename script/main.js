@@ -291,12 +291,17 @@ const animationTimeline = () => {
       "+=1"
     );
 
-  // tl.seek("currentStep");
-  // tl.timeScale(2);
+  // Solo permitir reiniciar al terminar la animación
+  let canRestart = false;
 
-  // Restart Animation on tap (mobile-friendly)
+  tl.eventCallback("onComplete", () => {
+    canRestart = true;
+  });
+
   const container = document.querySelector(".container");
   container.addEventListener("click", () => {
+    if (!canRestart) return;
+    canRestart = false;
     tl.restart();
   });
 };

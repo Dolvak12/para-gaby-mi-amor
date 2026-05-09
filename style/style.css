@@ -148,10 +148,12 @@ body {
   font-weight: 700;
   color: #c94a60;
   visibility: hidden;
+  word-spacing: 0.6em;
 }
 
 .extra-message span {
   display: inline-block;
+  margin: 0 0.08em;
 }
 
 /* ── Imagen y mensaje ── */
